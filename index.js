@@ -1,4 +1,5 @@
 //?=========== SELECTORS ===========
+window.onload=function (){
 let guess = document.getElementById("guess");
 
 let enterNumber = document.getElementById("number");
@@ -16,7 +17,7 @@ const randomNumber = Math.floor(Math.random()*100+1);
 console.log(randomNumber);
 
 //? ========= CLİCK OLAYINDA DEĞİŞİKLİKLER =======
-
+enterNumber.focus();
 check.addEventListener("click", ()=>{
     
    if(enterNumber.value>0 && enterNumber.value<=100){
@@ -26,6 +27,7 @@ check.addEventListener("click", ()=>{
        guess.innerHTML=`(1-${enterNumber.value})`;
        attempt.innerHTML--
        enterNumber.value="";
+       
     }else if(Number(enterNumber.value)<randomNumber){
         
         guess.innerHTML=`(${enterNumber.value}-100)`;
@@ -45,11 +47,9 @@ check.addEventListener("click", ()=>{
 
 
 
-
-
-
 })
+}
 reset.addEventListener("click", () => {
     window.location.reload(false);
-
+    enterNumber.focus();
 });
