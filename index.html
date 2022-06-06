@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <main>
+            <h1>Guess The Number <span id="guess">(1-100)</span></h1>
+            <div>
+                <input type="text" id="number" maxlength="3">
+            </div>
+
+            <div>
+                <button id="check">Check</button>
+                <button id="reset">Reset</button>
+            </div>
+            <h3>Write the number</h3>
+            <h3 class="message"></h3>
+            <p>Number of attempts: <span id="attempt">7</span></p>
+        </main>
+    </section>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
