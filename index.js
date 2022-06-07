@@ -33,19 +33,30 @@ check.addEventListener("click", ()=>{
        guess2.innerHTML=`${enterNumber.value}`;
        attempt.innerHTML--
        enterNumber.value="";
+       toggler.play();
        
     }else if(Number(enterNumber.value)<randomNumber){
         
         guess1.innerHTML=`${enterNumber.value}`;
         attempt.innerHTML--
         enterNumber.value="";
+        toggler.play();
     }else if(Number(enterNumber.value)==randomNumber){
          message.innerHTML= `Tebrikler 🥳` ;
          enterNumber.value="";
+         win.play();
     }
     if(+ attempt.innerHTML==0){
         document.querySelector("section").style.display="none";
-        bas.innerHTML=`Bugünde Ölmedim Anne`
+        bas.innerHTML=`Bugünde Ölmedim Anne`;
+        loser.play();
+
+        //* =========================NEW GAME==================== */
+        reset.style.display="inline-block";
+        reset.addEventListener("click", () => {
+            window.location.reload(false);
+            enterNumber.focus();
+        });
         
     }
         
@@ -57,11 +68,11 @@ check.addEventListener("click", ()=>{
        
     }
  
-reset.addEventListener("click", () => {
-    window.location.reload(false);
-    enterNumber.focus();
-});
-
+// reset.addEventListener("click", () => {
+//     window.location.reload(false);
+//     enterNumber.focus();
+// });
+//*=============================KEYDOWN=================*
 });enterNumber.addEventListener('keydown', (e) => {
     // console.log(e);
     if (e.code === "Enter") {

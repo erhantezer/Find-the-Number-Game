@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    background-image: url("../logo.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(249, 74, 10);
+    font-weight: bold;
+}
+#number{
+    border: 4px solid red;
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+span{
+    font-size: xx-large;
+    color: rgb(182, 119, 1);
+}
+#reset{
+    display: none;
+    margin: auto;
+}
+#check{
+    background-color: darkorange;
+    padding: 3px;
+    color: white;
+    width: 5rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px black;
+    
+}
+#check:active{
+    transform:translateX(4px) translateY(4px);
+    box-shadow: 0px  0px;  
+}
+.audio{
+    height: 10vh;
+    border: 1px solid black;
+    display: none;
+}
