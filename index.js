@@ -45,6 +45,11 @@ check.addEventListener("click", ()=>{
          message.innerHTML= `Tebrikler 🥳` ;
          enterNumber.value="";
          win.play();
+         reset.style.display="inline-block";
+         reset.addEventListener("click", () => {
+             window.location.reload(false);
+             enterNumber.focus();
+         });
     }
     if(+ attempt.innerHTML==0){
         document.querySelector("section").style.display="none";
